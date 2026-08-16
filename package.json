@@ -19,7 +19,9 @@
   },
   "homepage": "https://github.com/OT-Theo/GHGBLOCKCHAIN#readme",
   "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "^4.0.15",
     "@types/node": "^22.20.1",
+    "ethers": "^6.17.0",
     "hardhat": "^3.13.0",
     "typescript": "~6.0.3"
   }

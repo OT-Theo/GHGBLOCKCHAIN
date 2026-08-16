@@ -56,7 +56,7 @@ contract EmissionsRegistry {
 
     // ********************FACILITY REGISTRATION*******************
 
-    // @notice Registers a new manufacturing facility. Only the regulator may call this.
+    /// @notice Registers a new manufacturing facility. Only the regulator may call this.
     /// @param facilityAddr The wallet address representing the facility.
     /// @param name A readable name for the facility.
     function registerFacility(address facilityAddr, string calldata name) external RegulatorOnly {
@@ -75,7 +75,7 @@ contract EmissionsRegistry {
 
     // ****************************EMISSSIONS RECORD SUBMISSION*******************************
 
-    // @notice Submits the hash of an emissions report for the calling facility.
+    /// @notice Submits the hash of an emissions report for the calling facility.
     /// @param dataHash The keccak256/SHA-256 hash of the full off-chain emissions report.
     function submitEmissionsRecord(bytes32 dataHash) external RegisteredFacilityOnly {
         require(dataHash != bytes32(0), "Data hash not provided");
